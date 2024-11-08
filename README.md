@@ -1,1 +1,27 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=17025809&assignment_repo_type=AssignmentRepo)
+
+# The Significance of Union and Intersection Types in TypeScript
+
+TypeScript provides powerful type features that increase code flexibility and safety. Union Types and Intersection Types are essential tools for managing multiple types and combining various properties.
+
+## Union Types (`|`)
+
+Union types used to hold multiple types. It's defined using the pipe (`|`) symbol.
+
+**Example:**
+
+let id: string | number;
+id = "abc123";  // valid
+id = 101;       // valid
+
+
+
+## Intersection Types (`&`)
+
+Intersection Type merge multiple types into one. It's defined using the ampersand (&) symbol.
+
+**Example:**
+type Person = { name: string };
+type Contact = { email: string };
+type PersonContact = Person & Contact;
+
+const person: PersonContact = { name: "sakib", email: "hossain.sakib.x@.com" };
